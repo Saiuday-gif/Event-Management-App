@@ -12,10 +12,10 @@ const AddEvent = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            // నీ బ్యాకెండ్ అడ్రస్ కి డేటా పంపుతుంది
-            await axios.post('http://localhost:5000/api/events', { name, category, location, date });
+            // My backend is hosted on Render, so I need to use the full URL here
+            await axios.post('https://event-management-app-3-q3dh.onrender.com/api/events', { name, category, location, date });
             alert("Event Created Successfully!");
-            navigate('/'); // హోమ్ పేజీకి వెళ్తుంది
+            navigate('/'); 
         } catch (error) {
             alert("Failed to create event. Make sure server is running.");
         }

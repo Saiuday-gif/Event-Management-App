@@ -10,7 +10,7 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('/api/auth/login', { email, password });
+            await axios.post('https://event-management-app-3-q3dh.onrender.com/api/auth/login', { email, password });
             alert("Login Successful!");
             navigate('/dashboard');
         } catch (error) {

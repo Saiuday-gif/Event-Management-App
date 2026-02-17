@@ -10,7 +10,7 @@ const Register = () => {
         e.preventDefault();
         try {
             // Proxy is set in package.json, so we can use relative path
-            await axios.post('http://localhost:5000/api/auth/register', { name, email, password });
+            await axios.post('https://event-management-app-3-q3dh.onrender.com/api/auth/register', { name, email, password });
             alert("Registration Successful!");
         } catch (error) {
             console.error(error);
